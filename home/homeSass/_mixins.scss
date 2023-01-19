@@ -1,0 +1,65 @@
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin column-r {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@mixin row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin row-r {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@mixin p-left {
+  padding-left: 50px;
+}
+
+@mixin p-right {
+  padding-right: 50px;
+}
+
+@mixin m-section {
+  margin: 1em;
+}
+
+@mixin p-section {
+  padding: 1em;
+}
+
+@mixin bord-black {
+  border: 2px solid black;
+}
+
+@mixin bord-rad {
+  border-radius: 25px;
+}
+
+@mixin homeWindow {
+  @include row;
+  justify-content: space-between;
+  @include m-section;
+  @include p-section;
+  @include bord-black;
+  @include bord-rad;
+  &:hover {
+    transform: scale(1.05);
+  }
+  .window-a > div {
+    @include column;
+    justify-content: center;
+    @include p-section;
+  }
+  img {
+    @include bord-rad;
+    width: 200px;
+    height: 200px;
+  }
+}

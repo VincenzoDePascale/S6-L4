@@ -1,0 +1,16 @@
+footer {
+  @include row;
+  justify-content: space-around;
+  @include p-left;
+  @include p-right;
+  background-color: $bg-header;
+  div {
+    width: 33%;
+    @include p-section;
+    ul {
+      @include column;
+    }
+    .footer-r {
+    }
+  }
+}

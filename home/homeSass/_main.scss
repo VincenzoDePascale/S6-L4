@@ -1,0 +1,33 @@
+main {
+  @include row;
+  justify-content: space-between;
+  @include p-left;
+  @include p-right;
+  background-color: $bg-main;
+  .mainSection {
+    width: 65%;
+    .window-a {
+      @include row;
+      @include homeWindow;
+    }
+    .window-b {
+      @include row-r;
+      @include homeWindow;
+    }
+    .corsi {
+      @include column;
+      @include m-section;
+      @include p-section;
+      @include bord-black;
+    }
+    .contatti {
+      @include column;
+      @include m-section;
+      @include p-section;
+      @include bord-black;
+    }
+  }
+  aside {
+    width: 30%;
+  }
+}

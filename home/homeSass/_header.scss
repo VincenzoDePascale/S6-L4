@@ -1,0 +1,52 @@
+header {
+  @include p-left;
+  @include p-right;
+  background-color: $bg-header;
+  nav {
+    @include row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bg-header;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    img {
+      width: 75px;
+      height: 75px;
+      margin: 1em;
+      cursor: pointer;
+    }
+    ul {
+      @include row;
+      margin-right: 2em;
+      padding: 1em;
+      li {
+        padding-right: 2em;
+        font-size: 1.25em;
+        cursor: pointer;
+      }
+    }
+  }
+  .secondaryNav {
+    @include row;
+    justify-content: space-between;
+    .card {
+      @include column;
+      justify-content: center;
+      padding: 1em 3em;
+      .cardTop {
+        font-size: 2em;
+        font-weight: bold;
+      }
+      .cardBottom {
+        font-size: 1.25em;
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+    img {
+      border-radius: 500px;
+    }
+  }
+}
