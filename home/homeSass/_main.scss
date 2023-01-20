@@ -1,6 +1,7 @@
 main {
   @include row;
   justify-content: space-between;
+  @include m-section;
   @include p-left;
   @include p-right;
   background-color: $bg-main;

@@ -43,7 +43,6 @@
 }
 
 @mixin homeWindow {
-  @include row;
   justify-content: space-between;
   @include m-section;
   @include p-section;
@@ -51,15 +50,25 @@
   @include bord-rad;
   &:hover {
     transform: scale(1.05);
+    animation: 1s;
   }
-  .window-a > div {
+  div {
     @include column;
     justify-content: center;
     @include p-section;
+    h2 {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: 0;
+    }
+    div {
+      margin-top: 1em;
+      padding: 0;
+    }
   }
   img {
     @include bord-rad;
-    width: 200px;
+    min-width: 200px;
     height: 200px;
   }
 }
